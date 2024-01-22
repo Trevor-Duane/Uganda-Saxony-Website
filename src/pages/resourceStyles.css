@@ -1,0 +1,194 @@
+.resourcesContainer {
+  background-image: url("../assets/library.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* box-shadow: inset 0 0 0 2000px rgba(30, 142, 44, 0.35); */
+  background-position: 25% 35%;
+  background-blend-mode: multiply;
+  position: relative;
+  height: 50vmin;
+}
+
+.resourceTitle {
+  display: block;
+  position: absolute;
+  font-weight: 600;
+  bottom: -1rem;
+  display: none;
+  font-family: "Lato", sans-serif;
+  font-size: 3rem;
+  color: #e2f0e2;
+}
+.participantTitle {
+  margin-top: 1rem;
+}
+.participantTitle h6 {
+  color: #433f3f;
+  padding: 2rem 0rem 1rem 0rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.resourceContentSection {
+  height: auto;
+  padding-bottom: 1rem;
+}
+.participantsNavWrapper nav {
+}
+.participantsNav {
+  display: flex;
+}
+.participantButton {
+  border: 1px solid #e5e5e5;
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  text-transform: capitalize;
+  padding: 4px 10px;
+  flex: 1;
+  text-wrap: nowrap;
+}
+.activeParticipantButton {
+  border: 1px solid #1e8e2c;
+  background-color: #e2f0e2;
+  text-transform: capitalize;
+  font-family: "Lato", sans-serif;
+  color: #1e8e2c;
+  font-weight: bold;
+  font-size: 12px;
+  padding: 4px 10px;
+  flex: 1;
+  text-wrap: nowrap;
+}
+
+@media only screen and (max-width: 768px) {
+  .participantsCards {
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(200px, 1fr));
+    grid-column-gap: 1rem;
+    row-gap: 1rem;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .participantsCards {
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(200px, 1fr));
+    row-gap: 1rem;
+    grid-column-gap: 1rem;
+  }
+}
+@media all and (min-width: 67em) {
+  .resourcesContainer {
+    background-image: url("../assets/library.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 25% 35%;
+    background-blend-mode: multiply;
+    position: relative;
+    height: 70vmin;
+  }
+  .participantTitle h6 {
+    color: #433f3f;
+    padding: 2rem 0rem 1rem 0rem;
+    font-size: 1.8rem;
+    font-weight: bold;
+  }
+
+  .participantsCards {
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(200px, 1fr));
+    row-gap: 1rem;
+    grid-column-gap: 1rem;
+  }
+
+  .participantButton {
+    border: 1px solid #e5e5e5;
+    font-family: "Lato", sans-serif;
+    font-weight: normal;
+    font-size: 18px;
+    padding: 4px 10px;
+    flex: 1;
+    text-wrap: nowrap;
+  }
+  .activeParticipantButton {
+    border: 1px solid #1e8e2c;
+    background-color: #e2f0e2;
+    font-family: "Lato", sans-serif;
+    color: #1e8e2c;
+    font-weight: normal;
+    font-size: 18px;
+    padding: 4px 10px;
+    flex: 1;
+    text-wrap: nowrap;
+  }
+
+  /* Resource details pages */
+.resourcesContainerDetail{
+  background-image: url("../assets/library.jpg");
+background-size: cover;
+background-repeat: no-repeat;
+background-position: 25% 35%;
+background-blend-mode: multiply;
+position: relative;
+height: 70vmin;
+}
+}
+
+/* Resource details pages */
+.resourcesContainerDetail{
+    background-image: url("../assets/library.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 25% 35%;
+  background-blend-mode: multiply;
+  position: relative;
+  height: 70vmin;
+}
+.resourceContentWrapperDetail {
+  height: auto;
+
+}
+.resourceTitleDetail {
+    display: block;
+    position: absolute;
+    font-weight: 600;
+    bottom: -1.15rem;
+    font-family: "Lato", sans-serif;
+    font-size: 3rem;
+    color: #fff;
+  }
+  .organisationDetailsLevel{
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset;
+  border-radius: 6px;
+  height: auto;
+  padding: 1rem;
+  margin-bottom: 2rem;
+
+  }
+  .organisationDetailsImage{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: fit-content;
+    width: auto;
+  }
+  .organisationDetailsImage img{
+    object-fit: contain;
+    width: auto;
+    height: auto;
+  }
+  .organisationDetailsName h6{
+    font-size: 1.4rem;
+  }
+  .organisationDeailsType h6{
+    color: #1e8e2c;
+  }
+  .organisationDetailsBio{}

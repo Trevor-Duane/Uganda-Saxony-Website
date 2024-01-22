@@ -1,17 +1,82 @@
 import React from 'react';
+import 'bootstrap/dist/css/bootstrap.css';
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
 import ReactDOM from 'react-dom/client';
-import './index.css';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
+import Root from './routes/Root';
+import { createBrowserRouter, Route, RouterProvider } from 'react-router-dom';
+import JoinProject from './pages/JoinProject';
+import OurWork from './pages/OurWork';
+import Resources from './pages/Resources';
+import Trainings from './pages/Trainings';
+import Workshops from './pages/Workshops';
+import ContactUs from './pages/ContactUs';
+import Events from './pages/Events';
+import Gallery from './pages/Gallery';
+import ExpressInterest from './pages/ExpressInterest';
+import ErrorPage from './pages/ErrorPage';
+import ResourceDetailsPage from './pages/ResourceDetailsPage';
+
+
+
+const router = createBrowserRouter([
+  {
+    element: <Root/>,
+    errorElement: <ErrorPage/>,
+    children: [
+      {
+        path: "/",
+        element: <App/>,
+      },
+      {
+        path: "express_interest",
+        element: <JoinProject/>,
+      },
+      {
+        path: "join_project",
+        element: <JoinProject/>,
+      },
+      {
+        path: "our_work",
+        element: <OurWork/>,
+      },
+      {
+        path: "resources",
+        element: <Resources/>,
+      },
+      {
+        path: "trainings",
+        element: <Trainings/>,
+      },
+      {
+        path: "/workshops",
+        element: <Workshops/>,
+      },
+      {
+        path: "contact_us",
+        element: <ContactUs/>,
+      },
+      {
+        path: "events",
+        element: <Events/>,
+      },
+      {
+        path: "gallery",
+        element: <Gallery/>,
+      } ,
+      {
+        path:"participant-details/:id",
+        element: <ResourceDetailsPage/>
+      }
+
+    ]
+  }
+]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <RouterProvider router={router} />
   </React.StrictMode>
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();

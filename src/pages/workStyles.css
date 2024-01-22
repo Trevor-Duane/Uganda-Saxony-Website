@@ -1,0 +1,238 @@
+.aboutUsContainer{
+    background-image: url('../assets/us.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 25% 10%;
+    font-family: 'Lato', sans-serif;
+    position: relative;
+    height: 50vmin;
+}
+.aboutUsWrapper{
+    font-family: 'Lato', sans-serif;
+    
+
+}
+.aboutUsTitle{
+    display: block;
+    position: absolute;
+    font-weight: 600;
+    bottom: -1.25rem;
+    font-size: 3rem;
+    color: #fff;
+}
+.aboutUsSectionTextWrapper{
+    display: flex;
+    gap: 2rem;
+}
+.aboutUsSectionText{
+    padding: 2rem 0rem 0rem 0rem;
+    flex: 1 1 0px;
+}
+.aboutUsSectionTextOther{
+    padding: 0rem 0rem 0rem 0rem;
+    flex: 1 1 0px;
+}
+.memberSubSection{
+    display: flex;
+    padding-bottom: .5rem;
+    border-bottom: 1px solid #433F3f;
+    flex-direction: column-reverse;
+    
+}
+.memberSubSection span{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  /* background-color: #1e8e2c; */
+  color: #433F3f;
+  font-weight: bold;
+    
+}
+.aboutUsSectionText h6{
+    color: #433F3f;
+    font-size: 1.2rem;
+    background-color: #e2f0e2;
+    font-family: 'Lato', sans-serif;
+
+    border-bottom: 1px solid #433F3f;
+    /* border-top: 1px solid #433F3f; */
+    font-weight: 300;
+    padding: 4px 2px;
+}
+.aboutUsSectionTextOther h6{
+    color: #433F3f;
+    font-size: 1.2rem;
+    font-family: 'Lato', sans-serif;
+    border-bottom: 1px solid #433F3f;
+    font-weight: 300;
+    background-color: #e2f0e2;
+
+    padding: 4px 2px;
+}
+.aboutUsSectionText p{
+    color: #433F3f;
+    text-align: justify;
+    font-size: 12px;
+    font-family: 'Lato', sans-serif;
+
+}
+.aboutUsSectionTextOther p{
+    color: #433F3f;
+    font-family: 'Lato', sans-serif;
+    text-align: justify;
+    font-size: 12px;
+}
+.participantsSection{
+    background-color: #e2f0e2;
+    /* height: 20vh; */
+}
+.participantsWrapper{
+    padding: 1rem 0rem;
+}
+.participantGroupings{
+    color: #1e8e2c;
+    font-size: 1.2rem;
+    font-family: 'Lato', sans-serif;
+    font-weight: 600;
+    /* background-color: #e2f0e2; */
+}
+table {
+    font-family: 'Lato', sans-serif;
+    border-collapse: collapse;
+    font-size: 12px;
+    width: 100%;
+  }
+  
+  td, th {
+    border: 1px solid #433F3f;
+    color: #433F3f;
+    text-align: left;
+    padding: 4px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #faf9f6;
+  }
+
+  /* media queries for big screens */
+
+  @media all and (min-width: 67em) {
+    .aboutUsContainer{
+        background-image: url('../assets/us.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 25% 10%;
+        font-family: 'Lato', sans-serif;
+        position: relative;
+        height: 70vmin;
+    }
+
+    .aboutUsWrapper{
+        font-family: 'Lato', sans-serif;    
+    }
+    .aboutUsTitle{
+        display: block;
+        position: absolute;
+        font-weight: 600;
+        display: none;
+        bottom: -1.25rem;
+        font-size: 3rem;
+        color: #fff;
+    }
+    .aboutUsSectionTextWrapper{
+        display: flex;
+        gap: 2rem;
+    }
+    .aboutUsSectionText{
+        padding: 2rem 0rem 0rem 0rem;
+        flex: 1 1 0px;
+    }
+    .aboutUsSectionTextOther{
+        padding: 0rem 0rem 0rem 0rem;
+        flex: 1 1 0px;
+    }
+    .memberSubSection{
+        display: flex;
+        padding-bottom: .5rem;
+        border-bottom: 1px solid #433F3f;
+        flex-direction: column-reverse;
+        
+    }
+    .memberSubSection span{
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 18px;
+      display: flex;
+      justify-content: space-between;
+      /* background-color: #1e8e2c; */
+      color: #433F3f;
+      font-weight: bold;
+        
+    }
+    .aboutUsSectionText h6{
+        /* color: #433F3f; */
+        color: #1e8e2c;
+        font-size: 1.8rem;
+        background-color: #e2f0e2;
+        font-family: 'Lato', sans-serif;
+    
+        border-bottom: 1px solid #433F3f;
+        /* border-top: 1px solid #433F3f; */
+        font-weight: 500;
+        padding: 4px 2px;
+    }
+    .aboutUsSectionTextOther h6{
+        /* color: #433F3f; */
+        color: #1e8e2c;
+        font-size: 1.8rem;
+        font-family: 'Lato', sans-serif;
+        border-bottom: 1px solid #433F3f;
+        font-weight: 500;
+        background-color: #e2f0e2;
+    
+        padding: 4px 2px;
+    }
+    .aboutUsSectionText p{
+        color: #433F3f;
+        text-align: justify;
+        font-size: 21px;
+        font-family: 'Lato', sans-serif;
+    
+    }
+    .aboutUsSectionTextOther p{
+        color: #433F3f;
+        font-family: 'Lato', sans-serif;
+        text-align: justify;
+        font-size: 21px;
+    }
+    .participantsSection{
+        background-color: #e2f0e2;
+        /* height: 20vh; */
+    }
+    .participantsWrapper{
+        padding: 1rem 0rem;
+    }
+    .participantGroupings{
+        color: #1e8e2c;
+        font-size: 1.2rem;
+        font-family: 'Lato', sans-serif;
+        font-weight: 600;
+        /* background-color: #e2f0e2; */
+    }
+    table {
+        font-family: 'Lato', sans-serif;
+        border-collapse: collapse;
+        font-size: 21px;
+        width: 100%;
+      }
+      
+      td, th {
+        border: 1px solid #433F3f;
+        color: #433F3f;
+        text-align: left;
+        padding: 4px;
+      }
+      
+      tr:nth-child(even) {
+        background-color: #faf9f6;
+      }
+    
+  }
