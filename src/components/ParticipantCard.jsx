@@ -17,7 +17,7 @@ export const ParticipantCard = ({
       </div>
       <div className="profileInfo">
         <p>{actor_type}</p>
-        <p>{bio}</p>
+        {/* <div className="profileInfoBio" dangerouslySetInnerHTML={{__html: bio}}></div> */}
       </div>
 
       <div className="profileExtras">

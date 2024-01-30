@@ -1,65 +1,39 @@
 import React from "react";
 import "./resourceStyles.css";
 import Footer from "../components/Footer";
-import { organisations } from "../components/OrganisaationData";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+// import { organisations } from "../components/OrganisaationData";
 import { ParticipantCard } from "../components/ParticipantCard";
-import axios from 'axios';
-
-
-
-// const participants = [
-//   {
-//     id: 0,
-//     name: "All",
-//     slang: "All",
-//   },
-//   {
-//     id: 1,
-//     name: "Primary Schools",
-//     slang: "Primary School",
-//   },
-//   {
-//     id: 2,
-//     name: "Secondary Schools",
-//     slang: "Secondary School",
-//   },
-//   {
-//     id: 3,
-//     name: "Vocational Institutes",
-//     slang: "Vocational Institutes",
-//   },
-//   {
-//     id: 4,
-//     name: "Non Government Organisations",
-//     slang: "NGOs",
-//   },
-//   {
-//     id: 5,
-//     name: "Community Based Organisations",
-//     slang: "CBOs",
-//   },
-// ];
-
+import axios from "axios";
 
 const Resources = () => {
   const [participants, setParticipants] = React.useState([]);
+  const [organisations, setOrganisations] = React.useState([]);
 
   const [activeButton, setActiveButton] = React.useState(0);
 
   const fetchParticipants = () => {
-    axios.get(`https://uganda-saxonypartnership.org/cms/wp-json/acf/v3/organisation-types`)
-    .then((response) => {
-      console.log(response.data)
-      setParticipants((response.data).reverse())
-    })
-    .catch((error) => {
-      console.log(error)
-    })
-  }
+    axios
+      .all([
+        axios.get(
+          `https://uganda-saxonypartnership.org/cms/wp-json/acf/v3/organisation-types`
+        ),
+        axios.get(
+          `https://uganda-saxonypartnership.org/cms/wp-json/acf/v3/organisations`
+        ),
+      ])
+      .then(axios.spread((response1, response2) => {
+        console.log("participants", response1.data)
+        setParticipants(response1.data.reverse());
+        console.log("organisations", response2.data)
+        setOrganisations(response2.data)
+      }))
+
+  };
 
   React.useEffect(() => {
-    fetchParticipants()
-  }, [])
+    fetchParticipants();
+  }, []);
 
   return (
     <>
@@ -79,9 +53,9 @@ const Resources = () => {
             <nav className="participantsNav">
               {participants.map((item, index) => (
                 <button
-                  onClick={() => setActiveButton(item.id)}
+                  onClick={() => setActiveButton(item.acf.organisation_type_name)}
                   className={`${
-                    activeButton === item.id
+                    activeButton === item.acf.organisation_type_name
                       ? "activeParticipantButton"
                       : "participantButton"
                   }`}
@@ -99,11 +73,11 @@ const Resources = () => {
                 <ParticipantCard
                   key={item.id}
                   id={item.id}
-                  image={item.image}
-                  organisation_name={item.organisation_name}
-                  organisation_type={item.organisation_type}
-                  actor_type={item.actor_type}
-                  bio={item.bio}
+                  image={item.acf.organisation_logo}
+                  organisation_name={item.acf.orgainsation_name}
+                  organisation_type={item.acf.organisation_status}
+                  actor_type={item.acf.organisation_type}
+                  bio={item.acf.organisation_details}
                 />
               ))}
             </div>
@@ -113,17 +87,17 @@ const Resources = () => {
                 organisations
                   .filter(
                     (organisation) =>
-                      organisation.participant_id === activeButton
+                      organisation.acf.organisation_type === activeButton
                   )
                   .map((item, index) => (
                     <ParticipantCard
                       key={item.id}
                       id={item.id}
-                      image={item.image}
-                      organisation_name={item.organisation_name}
-                      organisation_type={item.organisation_type}
-                      actor_type={item.actor_type}
-                      bio={item.bio}
+                      image={item.acf.organisation_logo}
+                      organisation_name={item.acf.organisation_name}
+                      organisation_type={item.acf.organisation_status}
+                      actor_type={item.acf.organisation_type}
+                      bio={item.acf.organisation_details}
                     />
                   ))}
             </div>

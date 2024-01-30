@@ -1,32 +1,40 @@
 import React from "react";
 import Footer from "../components/Footer";
-import { organisations } from "../components/OrganisaationData";
 import "./resourceStyles.css";
 import { useParams } from "react-router-dom";
+import axios from "axios";
 
 const ResourceDetailsPage = () => {
-  const [organisation_name, setOrganisation_name] = React.useState("");
-  const [organisation_image, setOrganisation_image] = React.useState("");
-  const [organisation_type, setOrganisation_type] = React.useState("");
-  const [actor_type, setActor_type] = React.useState("");
-  const [organisation_bio, setOrganisation_bio] = React.useState("");
+  const [organisations, setOrganisations] = React.useState([]);
 
   const { id } = useParams();
 
-  React.useEffect(() => {
-    const fetchOrganisation = () => {
-      const result = organisations.filter(
-        (organisation) => organisation.id === id
-      );
-      setOrganisation_name(result[0].organisation_name);
-      setOrganisation_image(result[0].image);
-      setOrganisation_type(result[0].organisation_type);
-      setActor_type(result[0].actor_type);
-      setOrganisation_bio(result[0].bio);
-    };
+  console.log("id id", id)
 
-    fetchOrganisation();
-  }, [id]);
+  const fetchOrganisations = () => {
+    axios.get(`https://uganda-saxonypartnership.org/cms/wp-json/acf/v3/organisations`)
+    .then((response) => {
+      console.log("All organisations", response.data)
+      setOrganisations(response.data)
+    })
+    .catch((error) => {
+      console.log(error)
+    })
+
+  };
+
+  React.useEffect(() => {
+    fetchOrganisations();
+  }, []);
+
+  const filtered = organisations.filter(organisation => {
+    return organisation.id == id ;
+  });
+
+  console.log("filtered filtered", filtered)
+
+
+
   return (
     <>
       <section className="resourcesContainerDetail container-fluid">
@@ -41,21 +49,25 @@ const ResourceDetailsPage = () => {
             <h6>Participating Organisation in Uganda</h6>
           </div>
 
-          <div className="organisationDetailsLevel">
-            <div className="organisationDetailsImage">
-              <img className="img-fluid" alt="" src={organisation_image} />
+          <div>
+            {filtered.map((item, index) => (
+              <div className="organisationDetailsLevel" key={item.id}>
+              <div className="organisationDetailsImage">
+                <img className="img-fluid" alt="" src={item.acf.organisation_logo} />
+              </div>
+              <div className="organisationDetailsName">
+                <h6>{item.acf.orgainsation_name}</h6>
+              </div>
+              <hr></hr>
+              <div className="organisationDeailsType">
+                <h6>
+                  {item.acf.organisation_type}
+                </h6>
+              </div>
+              <div className="organisationDetailsBio" dangerouslySetInnerHTML={{__html: item.acf.organisation_details}}>
+              </div>
             </div>
-            <div className="organisationDetailsName">
-              <h6>{organisation_name}</h6>
-            </div>
-            <div className="organisationDeailsType">
-              <h6>
-                {actor_type} {organisation_type}
-              </h6>
-            </div>
-            <div className="organisationDetailsBio">
-              <p>{organisation_bio}</p>
-            </div>
+            ))}
           </div>
         </div>
       </section>

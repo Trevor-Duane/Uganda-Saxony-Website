@@ -1,17 +1,10 @@
 import React from 'react';
 import { FaBookmark, FaFacebook, FaFile, FaInstagram, FaLink, FaTwitter } from "react-icons/fa";
-import slider1 from './assets/slider1.jpg'
-import slider2 from './assets/slider2.jpg'
-import slider3 from './assets/slider3.jpg'
-import saxony from './assets/saxony.png'
-import ENS from './assets/ENS-Logo.png'
-import KWDT from './assets/KWDT_LOGO.jpg'
-import g1 from './assets/workshop/PXL_20230714_063057105.jpg'
-import g2 from './assets/workshop/PXL_20230714_091336892.jpg'
 import Slider from "react-slick";
 import './app.css'
 import Footer from './components/Footer';
 import { Link } from 'react-router-dom';
+import axios from 'axios';
 
 
 
@@ -30,7 +23,27 @@ function App() {
   };
 
   const [active, setActive] = React.useState("cso");
+  const [recent, setRecent] = React.useState([]);
 
+
+  const fetchMostRecentEvent = () => {
+    axios.get(`https://uganda-saxonypartnership.org/cms/wp-json/acf/v3/partnership-events`)
+      .then((response) => {
+        const recentPost = []
+        recentPost.push(response.data[0])
+        console.log("most recent post", recentPost)
+
+
+        setRecent(recentPost)
+      })
+      .catch((error) => {
+        console.log(error)
+      })
+  }
+
+  React.useEffect(() => {
+    fetchMostRecentEvent()
+  }, [])
 
   return (
     <>
@@ -39,7 +52,7 @@ function App() {
           <div className="slidesContainer">
             <img
               className="img-fluid w-100"
-              src={slider1}
+              src="https://uganda-saxonypartnership.org/cms/wp-content/uploads/2024/01/slider1.jpg"
               alt="First slide"
             />
             <div className="heroContent">
@@ -58,7 +71,7 @@ function App() {
           <div className="slidesContainer">
             <img
               className="img-fluid w-100"
-              src={slider2}
+              src="https://uganda-saxonypartnership.org/cms/wp-content/uploads/2024/01/slider2.jpg"
               alt="First slide"
             />
 
@@ -79,7 +92,7 @@ function App() {
           <div className="slidesContainer">
             <img
               className="img-fluid w-100"
-              src={slider3}
+              src="https://uganda-saxonypartnership.org/cms/wp-content/uploads/2024/01/slider3-scaled.jpg"
               alt="First slide"
             />
 
@@ -138,23 +151,36 @@ function App() {
               <h6 className="sectionHeader">Events</h6>
 
               <div>
-                <div className="newzTop">
-                  <img src={slider1} className="img-fluid newzCardImage" alt="" />
-                  <div className="dateWrapper">
-                    <span>22</span>
-                    <span>MAR</span>
+                {recent.length !== 0 ?
+
+                  <div>
+                    {recent.map((item, index) => (
+                      <div className="newzTop" key={item.id}>
+                        <img src={item.acf.event_images[0]} className="img-fluid newzCardImage" alt="" />
+                        <div className="dateWrapper">
+                          <span>{item.acf.event_date}</span>
+                        </div>
+                        <div className="titleWrapper">
+                          <h6 className="newz-title">{item.acf.event_title}</h6>
+                        </div>
+                      </div>
+                    ))}
+
+                    <div>
+                      <Link to="/events" className="sectionLink">
+                        <FaLink color="#1E8E2C" size={18} />
+                        <span>View all events</span>
+                      </Link>
+                    </div>
                   </div>
-                  <div className="titleWrapper">
-                    <h6 className="newz-title">Orem ipsumLabore ut non cillum Lorem sint velit</h6>
+
+                  :
+                  <div className="newzTop emptyNewzTop">
+                    <span>No Recent Events</span>
                   </div>
-                </div>
+                }
               </div>
-              <div>
-                <Link to="/events" className="sectionLink">
-                  <FaLink color="#1E8E2C" size={18} />
-                  <span>View all events</span>
-                </Link>
-              </div>
+
 
               <hr></hr>
 
@@ -266,16 +292,16 @@ function App() {
         <div className="container membersWrapper">
           <h6 className="memberSectionHead">Project Parties/Members</h6>
           <p className="sectionParaText">The partnership seeks to collaborate Civil Society Organisations in Uganda and Germany, as well as schools, municipalities people from the science and business sector, who does what?</p>
-            <div className="d-flex gap-5 mt-5">
-              <div>
-                <img src={KWDT} height="120" width="100" alt="" />
-                <h6 className="memberName">Project Coordinator</h6>
-              </div>
-              <div>
-                <img src={ENS} height="120" width="120" alt="" />
-                <h6 className="memberName">Collaborative Partner</h6>
-              </div>
+          <div className="d-flex gap-5 mt-5">
+            <div>
+              <img src="https://uganda-saxonypartnership.org/cms/wp-content/uploads/2024/01/KWDT_LOGO.jpg" height="120" width="100" alt="" />
+              <h6 className="memberName">Project Coordinator</h6>
             </div>
+            <div>
+              <img src="https://uganda-saxonypartnership.org/cms/wp-content/uploads/2024/01/ENS-Logo.png" height="120" width="120" alt="" />
+              <h6 className="memberName">Collaborative Partner</h6>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -316,11 +342,11 @@ function App() {
 
           <div className="d-flex gap-4">
             <div className="galleryImageContainer">
-              <img src={g1} className="img-fluid gallery-image" height="350" width="400" alt="" />
+              <img src="https://uganda-saxonypartnership.org/cms/wp-content/uploads/2024/01/PXL_20230714_063057105-scaled.jpg" className="img-fluid gallery-image" height="350" width="400" alt="" />
             </div>
 
             <div className="galleryImageContainer">
-              <img src={g2} className="img-fluid gallery-image" height="350" width="400" alt="" />
+              <img src="https://uganda-saxonypartnership.org/cms/wp-content/uploads/2024/01/PXL_20230714_091336892-scaled.jpg" className="img-fluid gallery-image" height="350" width="400" alt="" />
             </div>
           </div>
 
@@ -330,17 +356,13 @@ function App() {
 
       <section className="container-fluid saxonyContainer">
         <div className="container saxonyWrapper">
-          <img className="img-fluid" src={saxony} alt=""/>
+          <img className="img-fluid" src="https://uganda-saxonypartnership.org/cms/wp-content/uploads/2024/01/saxony.png" alt="" />
         </div>
 
       </section>
 
       <section className="container-fluid footerContainer">
         <Footer />
-        {/* <hr></hr>
-        <div className="copyRightSection">
-          <h6>&copy; Uganda-Saxony Partnership | Built and powered by Tenda Africa</h6>
-        </div> */}
       </section>
     </>
   )

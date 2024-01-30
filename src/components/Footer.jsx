@@ -35,10 +35,12 @@ const Footer = () => {
               <h6>Useful Links</h6>
             </div>
             <div className="footerLinks">
-              <a href='https://cms.uganda-saxonypartnership.org/wp-admin' target='_blank' rel='noreferrer'>Staff</a>
-              <a href="1">Privacy</a>
-              <a href="1">Cookie Policy</a>
-              <a href="1">Terms & Conditions</a>
+              <Link to='https://cms.uganda-saxonypartnership.org/wp-admin' target='_blank' rel='noreferrer'>Staff</Link>
+              {/* <Link to="/privacy-policy">Privacy Policy</Link> */}
+              <Link to="/cookie-policy">Cookie Policy</Link>
+              {/* <Link to="/terms&Conditions">Terms & Conditions</Link> */}
+              <Link to="#">Privacy Policy</Link>
+              <Link to="#">Terms & Conditions</Link>
             </div>
           </div>
 

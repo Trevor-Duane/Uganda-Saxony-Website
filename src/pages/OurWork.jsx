@@ -1,5 +1,4 @@
 import React from "react";
-import goal_17 from "../assets/goals_17.jpg";
 import ENS from "../assets/ENS-Logo.png";
 import KWDT from "../assets/KWDT_LOGO.jpg";
 import { RiExternalLinkFill } from "react-icons/ri";

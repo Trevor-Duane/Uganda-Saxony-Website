@@ -20,9 +20,9 @@ const EventCard = ({category_name, event_name, slang, date, bio, gallery, onClic
         </div>
 
       <div className="eventCardText">
-        <p>
-          {bio}
-        </p>
+        <div dangerouslySetInnerHTML={{__html: bio}}>
+          
+        </div>
       </div>      
     </div>
   );

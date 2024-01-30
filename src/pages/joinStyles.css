@@ -1,125 +1,142 @@
-.joinContainer{
+.joinContainer {
+  position: relative;
+  background-image: url("https://uganda-saxonypartnership.org/cms/wp-content/uploads/2024/01/join.png");
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: multiply;
+  height: 50vmin;
+}
+
+.onlineTemplateWrapper {
+  border-top: 1px solid #1e8e2c;
+}
+.onlineTemplateWrapper h6 {
+  color: #000;
+  font-size: 1.8rem;
+  font-family: "Lato", sans-serif;
+  font-weight: bold;
+  padding-top: 1rem;
+}
+.onlineTemplateWrapper p {
+  color: #433f3f;
+  font-size: 14px;
+  font-family: "Lato", sans-serif;
+}
+
+.templateDownloadSection {
+  margin: 3rem 0rem;
+}
+.templateDownloadSection h6 {
+  color: #433f3f;
+  font-size: 1.8rem;
+  font-family: "Lato", sans-serif;
+  font-weight: bold;
+}
+.templateDownloadSection p {
+  font-size: 12px;
+  font-family: "Lato", sans-serif;
+  color: #433f3f;
+}
+.fileDownloadRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #e5e5e5;
+  margin: 4px 2px 12px 2px;
+  padding: 2px 2px;
+}
+.fileIconWrapper span {
+  font-size: 12px;
+  font-family: "Lato", sans-serif;
+  cursor: unset;
+  padding: 0px 4px;
+}
+.fileDownloadButton {
+  border: none;
+  background-color: #433f3f;
+  font-family: "Lato", sans-serif;
+  color: #fff;
+  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 2px;
+}
+.fileDownloadButton:hover {
+  border: none;
+  background-color: #1e8e2c;
+  font-family: "Lato", sans-serif;
+  color: #fff;
+  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 2px;
+}
+.onlineSubmissionSection {
+  display: none;
+}
+
+.fileUploadSection {
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+    rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+  border-radius: 6px;
+  padding: 1rem;
+  display: hidden;
+  margin-bottom: 30vh;
+}
+.fileUploadLabel {
+  font-size: 14px;
+  color: #1e8e2c;
+}
+.fileUploadButtonWrapper {
+  background-color: none;
+}
+
+.tableSectionsHead {
+  font-family: "Lato", sans-serif;
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #433f3f;
+  padding-top: 1.4rem;
+}
+
+.paddingSpace {
+  height: 40vh;
+}
+
+@media all and (min-width: 67em) {
+  .joinContainer {
     position: relative;
-    background-image: url('../assets/join.png');
+    background-image: url("https://uganda-saxonypartnership.org/cms/wp-content/uploads/2024/01/join.png");
     background-size: cover;
     background-position: center;
     background-blend-mode: multiply;
-    height:50vmin;
-}
-
-.onlineTemplateWrapper{
-    border-top: 1px solid #1E8e2c;
-}
-.onlineTemplateWrapper h6{
-    color: #000;
-    font-size: 1.8rem;
-    font-family: 'Lato', sans-serif;
-    font-weight: bold;
-    padding-top: 1rem;
-}
-.onlineTemplateWrapper p{
-    color: #433F3f;
-    font-size: 14px;
-    font-family: 'Lato', sans-serif;
-}
-
-
-.templateDownloadSection{
-    margin: 3rem 0rem;
-
-}
-.templateDownloadSection h6{
-    color: #433F3f;
-    font-size: 1.8rem;
-    font-family: 'Lato', sans-serif;
-    font-weight: bold;
-}
-.templateDownloadSection p{
-    font-size: 12px;
-    font-family: 'Lato', sans-serif;
-    color: #433F3f;
-}
-.fileDownloadRow{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border-bottom: 1px solid #e5e5e5;
-    margin: 4px 2px 12px 2px;
-    padding: 2px 2px;
-}
-.fileIconWrapper span{
-    font-size: 12px;
-    font-family: 'Lato', sans-serif;
+    height: 70vmin;
+  }
+  .onlineTemplateWrapper p {
+    color: #433f3f;
+    font-size: 21px;
+    font-family: "Lato", sans-serif;
+  }
+  .fileIconWrapper span {
+    font-size: 18px;
+    font-family: "Lato", sans-serif;
     cursor: unset;
-    padding: 0px 4px;
-}
-.fileDownloadButton{
+    padding: 2px 8px;
+  }
+  .fileDownloadButton {
     border: none;
-    background-color: #1E8e2c;
-    font-family: 'Lato', sans-serif;
+    background-color: #433f3f;
+    font-family: "Lato", sans-serif;
     color: #fff;
-    font-size: 12px;
-    padding: 2px 4px;
+    font-size: 18px;
+    padding: 4px 8px;
     border-radius: 2px;
+  }
+  .fileDownloadButton:hover {
+    border: none;
+    background-color: #1e8e2c;
+    font-family: "Lato", sans-serif;
+    color: #fff;
+    font-size: 18px;
+    padding: 4px 8px;
+    border-radius: 2px;
+  }
 }
-
-/* ............form styles...................... */
-.formSeperator{
-    border-bottom: 1px dotted #433F3f;
-}
-.tableSectionsHead{
-    font-family: 'Lato', sans-serif;
-    font-size: 1.4rem;
-    font-weight: bold;
-    color: #433F3f;
-
-    padding-top: 1.4rem;
-
-}
-.custom-file input[type=file] {
-    margin-left: -2px !important;
-  }
-  
-  .custom-file input[type=file]::-webkit-file-upload-button {
-    display: none;
-  }
-  
-  .custom-file input[type=file]::file-selector-button {
-    display: none;
-  }
-  
-  .custom-file:hover label {
-    background-color: #dde0e3;
-    cursor: pointer;
-  }
-
-  @media all and (min-width: 67em) {
-    .joinContainer{
-        position: relative;
-        background-image: url('../assets/join.png');
-        background-size: cover;
-        background-position: center;
-        background-blend-mode: multiply;
-        height:70vmin;
-    }
-    .onlineTemplateWrapper p{
-        color: #433F3f;
-        font-size: 21px;
-        font-family: 'Lato', sans-serif;
-    }
-    .fileIconWrapper span{
-        font-size: 18px;
-        font-family: 'Lato', sans-serif;
-        cursor: unset;
-        padding: 0px 4px;
-    }
-    .fileDownloadButton{
-        border: none;
-        background-color: #1E8e2c;
-        font-family: 'Lato', sans-serif;
-        color: #fff;
-        font-size: 18px;
-        padding: 2px 4px;
-        border-radius: 2px;
-    }
-  }

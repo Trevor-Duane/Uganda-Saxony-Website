@@ -17,6 +17,9 @@ import Gallery from './pages/Gallery';
 import ExpressInterest from './pages/ExpressInterest';
 import ErrorPage from './pages/ErrorPage';
 import ResourceDetailsPage from './pages/ResourceDetailsPage';
+import CookiePolicy from './pages/CookiePolicy';
+import PrivacyPolicy from './pages/PrivacyPolicy';
+import TermsConditions from './pages/TermsConditions';
 
 
 
@@ -68,6 +71,18 @@ const router = createBrowserRouter([
       {
         path:"participant-details/:id",
         element: <ResourceDetailsPage/>
+      },
+      {
+        path:"cookie-policy",
+        element: <CookiePolicy/>
+      },
+      {
+        path:"privacy-policy",
+        element: <PrivacyPolicy/>
+      },
+      {
+        path:"terms&conditions",
+        element: <TermsConditions/>
       }
 
     ]
