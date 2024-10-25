@@ -1,2 +1,0 @@
-wordpress end point for events
-https://uganda-saxonypartnership.org/cms/wp-json/wp/v2/partnership-events
