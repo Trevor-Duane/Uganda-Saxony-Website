@@ -1,0 +1,61 @@
+.joinContainer {
+    position: relative;
+    background-image: url("https://uganda-saxonypartnership.org/cms/wp-content/uploads/2024/07/join-saxony.png");
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: multiply;
+    height: 575px;
+    margin-top: -12px !important;
+  border-top: 2px solid #6b9671;
+  }
+  .onlineTemplateSection{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .onlineTemplateWrapper {
+    border-top: 2px solid #1e8e2c;
+    padding: 2rem;
+    margin: 2rem 0rem;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px; 
+  }
+ 
+  .fileDownloadRow {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #e5e5e5;
+    margin: 4px 2px 12px 2px;
+    padding: 2px 2px;
+  }
+  .fileIconWrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .fileIconWrapper span {
+    cursor: unset;
+    padding: 0px 4px;
+  }
+  .fileDownloadButton {
+    border: none;
+    background-color: #433f3f;
+    color: #fff;
+    font-size: 1rem;
+    padding: 4px 8px;
+    border-radius: 2px;
+  }
+  .fileDownloadButton:hover {
+    border: none;
+    background-color: #1e8e2c;
+    font-family: "Lato", sans-serif;
+    color: #fff;
+    font-size: 12px;
+    padding: 4px 8px;
+    border-radius: 2px;
+  }
+  .paddingSpace{
+    height: 40vh;
+  }
+
+  

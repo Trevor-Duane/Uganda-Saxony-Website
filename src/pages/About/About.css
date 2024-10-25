@@ -1,0 +1,110 @@
+
+.aboutUsSectionTextWrapper {
+  display: flex;
+  gap: 2rem;
+}
+.aboutUsSectionText {
+  flex: 1 1 0px;
+  padding-bottom: 1rem;
+}
+.aboutUsSectionText h6 {
+  color: #1e8e2c;
+  background-color: #e2f0e2;
+  border-bottom: 1px solid #433f3f;
+  padding: 2rem 0rem 0.5rem 1rem;
+}
+.aboutUsSectionText p {
+  color: #433f3f;
+  text-align: justify;
+  padding: 0.5rem;
+}
+.aboutUsSectionTextOther {
+  padding: 0rem 0rem 2rem 0rem;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.referrer-link a{
+  text-decoration: none;
+  color: #1e8e2c;
+  position: relative;
+  font-size: .8rem;
+  transition: color 0.3s ease;  
+
+}
+.referrer-link a::after {
+  content: '';             
+  position: absolute;      
+  left: 0;                 
+  right: 100%;             
+  bottom: 0;               
+  border-bottom: 1px solid #1e8e2c; 
+  transition: right 0.5s ease-in-out;
+}
+.referrer-link a:hover{
+  color: #1e8e2c;
+}
+.referrer-link a:hover::after {
+  right: 0;                
+}
+.sectionParaList li{
+  font-size: 1rem;
+  
+}
+.memberSubSection {
+  display: flex;
+  gap: 10px;
+  border-bottom: 1px solid #433f3f;
+}
+.memberSubSection p {
+  color: #433f3f;
+  font-weight: bold;
+}
+.aboutUsSectionTextOther p {
+  color: #433f3f;
+  text-align: justify;
+}
+.participantsSection {
+  background-color: #e2f0e2;
+}
+.participantsWrapper {
+  padding:4rem 0rem;
+}
+.participantGroupings h6 {
+  color: #1e8e2c;
+  padding: 1rem 0rem 1rem 0rem;
+}
+table {
+  font-family: "Lato", sans-serif;
+  border-collapse: collapse;
+  font-size: 1.2rem;
+  width: 100%;
+}
+
+td,
+th {
+  border: 1px solid #433f3f;
+  color: #433f3f;
+  text-align: left;
+  padding: 4px;
+}
+
+tr:nth-child(even) {
+  background-color: #faf9f6;
+}
+
+@media all and (max-width: 39.8em) {
+  .aboutUsSectionTextWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .aboutUsSectionTextOther {
+    padding: 0rem 1rem;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}

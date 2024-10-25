@@ -1,0 +1,91 @@
+.eventsCard {
+  border-radius: 8px;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  width: 100%;
+  min-height: fit-content;
+  display: flex;
+  gap: 4px;
+  margin-bottom: 10px;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+.eventsCard:hover {
+  border-radius: 8px;
+  /* outline: 1px solid #6b9671; */
+  background: rgb(226,240,226);
+background: linear-gradient(90deg, rgba(226,240,226,1) 28%, rgba(255,255,255,1) 79%);
+  /* background-color: #e2f0e2; */
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.eventCardTop {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  align-items: flex-start;
+}
+.eventTitle {
+  flex: 1;
+  margin: auto;
+  display: flex;
+}
+.eventTitle p {
+  padding: 8px;
+  font-size: 1.2rem;
+  width: 90%;
+  color: #1e8e2c;
+  margin: auto 0  ;
+  font-weight: bold;
+}
+.eventDate {
+  display: flex;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: auto;
+}
+.eventDate p {
+  font-size: 0.8rem;
+  background-color: #1e8e2c;
+  border-bottom-left-radius: 6px;
+  border-top-right-radius: 8px;
+  font-weight: bold;
+  color: #f1f6f1;
+  margin: auto;
+  padding: 10px;
+}
+
+/* //////////////////////cardmiddlStyles/////////////////// */
+.eventCardMiddle {
+  border-top: 1px solid #ccdccc;
+  padding: 8px;
+}
+.eventBody {
+  text-align: justify;
+  font-size: 1rem;
+  color: #433f3f;
+}
+
+/* /////////////////cardbottom styles//////////////////////////// */
+.eventCardBottom {
+  display: flex;
+  padding: 0px 10px 10px 10px;  
+  align-items: center;
+  justify-content: space-between;
+}
+.eventSlang {
+  background-color: #e2f0e2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+}
+.eventSlang p {
+  display: inline-block;
+  color: #1e8e2c;
+  margin: auto;
+  font-size: 0.8rem;
+  padding: 6px;
+}

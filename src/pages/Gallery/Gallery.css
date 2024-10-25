@@ -1,0 +1,126 @@
+/* gallery section */
+.gallery-section-head{
+    margin-top: 1rem;
+}
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 10px;
+    padding: 10px;
+    margin-bottom: 1rem;
+    background-color: #e2f0e2;
+  }
+  
+  .gallery-item {
+    position: relative;
+  }
+  
+  .gallery-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  /* gallery section */
+ /* Overall styling for the gallery section */
+.gallery-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr; /* Two columns: left for thumbnails, right for large image */
+  gap: 20px;
+  padding: 20px;
+  margin-bottom: 20px;
+  background-color: #e2f0e2; /* Apply soft green background */
+  border-radius: 10px; /* Rounded corners for a smooth look */
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+
+/* Left column: 2-column grid for thumbnails */
+.thumbnails-column {
+  height: 600px; /* Fixed height for the left column */
+  overflow-y: auto; /* Scrollable */
+  padding-right: 10px;
+  border-right: 2px solid #1e8e2c; /* Accent border color */
+}
+
+.thumbnail-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columns in the grid */
+  gap: 10px; /* Space between thumbnail items */
+}
+
+.thumbnail-item {
+  cursor: pointer;
+  text-align: center;
+}
+
+.thumbnail-image {
+  width: 100%; /* Automatically fit the grid cell width */
+  height: 100px; /* Fixed height for thumbnails */
+  object-fit: cover;
+  border-radius: 5px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 2px solid transparent; /* Border for hover effect */
+}
+
+.thumbnail-image:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15); /* Shadow on hover */
+  border-color: #1e8e2c; /* Green border on hover */
+}
+
+/* Right column: Large image display */
+.image-display-column {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; /* Ensures caption appears below the image */
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.selected-image {
+  width: 100%; /* Fit the container width */
+  height: 400px; /* Fixed height for the main image */
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.image-caption {
+  margin-top: 10px;
+  color: #1e8e2c; /* Green caption text */
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* Typography and section headers */
+.eventsTitle h6.sectionHeader {
+  color: #1e8e2c; /* Apply green accent to headers */
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.eventsTitle p.sectionParaText {
+  color: #333;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+/* Scrollbar styling for the thumbnails */
+.thumbnails-column::-webkit-scrollbar {
+  width: 6px;
+}
+
+.thumbnails-column::-webkit-scrollbar-thumb {
+  background-color: #1e8e2c; /* Green scrollbar */
+  border-radius: 10px;
+}
+
+.thumbnails-column::-webkit-scrollbar-track {
+  background-color: #e2f0e2; /* Match background */
+}

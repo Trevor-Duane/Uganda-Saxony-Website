@@ -1,0 +1,117 @@
+/* main component css for both */
+.uganda-cover{
+    height: 575px;
+    position: relative;
+    margin-top: -13px !important;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    background-image: url('https://uganda-saxonypartnership.org/cms/wp-content/uploads/2024/07/bunyonyi-hiils.jpg');
+}
+.uganda-cover-text{
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    bottom: 01rem;
+}
+.uganda-cover-text span{
+    color: #fff;
+    display: block;
+    font-size: 1rem;
+}
+.saxony-cover{
+    height: 575px;
+    margin-top: -13px !important;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    background-image: url('https://uganda-saxonypartnership.org/cms/wp-content/uploads/2024/07/sachsen.jpg');
+
+}
+.resources-page{
+    display: flex;
+    margin-top: 1rem;
+    height: auto;
+    min-height: 180vh;
+}
+.res-side-links{
+    width: 300px;
+    max-width: 300px;
+    height: 400px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+.side-links{
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0px 0px 8px;
+}
+.side-link{
+    text-decoration: none;
+    border-bottom: 1px solid #e2f0e2;
+    color: #1e8e2c;
+    margin-bottom: 10px;
+    font-size: .9rem;
+    
+}.side-link:hover{
+    color: #c5bcbc;
+    transition: .5s;
+}
+
+.res-content{
+    flex: 1;
+    border-left: 1px solid rgba(0, 0, 0, 0.08);
+    padding: 8px 0px 0px 12px;
+    font-size: .9rem;
+}
+
+.resource-main-head{
+    font-size: 1.2rem;
+    color: #1e8e2c;
+    font-weight: bold;
+}
+.toggeable-main-head{
+    font-size: 1rem;
+    color: #1e8e2c;
+    font-weight: bold;
+    margin-top: 1rem;
+}
+.resource-headers{
+    font-size: 1.2rem;
+    color: #1e8e2c;
+}
+.resource-text{
+    font-size: 1rem;
+}
+
+.saxon-maps{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.link-toggeable{
+    color: #1e8e2c;
+}
+
+
+/* ///// */
+@media all and (max-width: 39.8em) {
+    .resources-page{
+        display: flex;
+        flex-direction: column;
+        margin-top: 1rem;
+        height: auto;
+        min-height: 180vh;
+    }
+    .res-side-links{
+        width: 300px;
+        max-width: 300px;
+        height: fit-content;
+        display: flex;
+        margin: auto;
+        align-items: center;
+        box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    }
+   
+}

@@ -1,0 +1,31 @@
+.toggle-container-header{
+    display: flex;
+    margin-top: .3rem;
+    background-color: #1e8e2c;
+    border: 1px solid #1e8e2c;
+    justify-content: space-between;
+    align-items: center;
+}
+.toggle-tittle{
+    padding: 8px;
+    font-weight: 500;
+}
+.toggle-tittle p{
+    font-size: 1rem;
+    margin: auto;
+    color: #fff;
+}
+.toggle-icon{
+    margin-right: 12px;
+    /* background-color: #e2f0e2; */
+    background-color: #1e8e2c;
+    padding: 6px;
+    border-radius: 50%;
+}
+.toggeable-text-container{
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+    background-color: #e2f0e2;
+}
+.toggeable-text-container p{
+    padding: 10px 6px;
+}
