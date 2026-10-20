@@ -1,0 +1,118 @@
+/* ==========================================================================
+   Toggeable / Accordion - Modern Professional Theme
+   ========================================================================== */
+
+.toggeable-container {
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+  border-radius: var(--radius-md);
+  transition: all var(--transition-normal);
+}
+
+button.toggle-container-header {
+  display: flex;
+  width: 100%;
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.25rem;
+  cursor: pointer;
+  text-align: left;
+  box-shadow: var(--shadow-xs);
+  transition: all var(--transition-fast);
+}
+
+button.toggle-container-header:hover {
+  background-color: var(--primary-subtle);
+  border-color: var(--primary);
+  box-shadow: var(--shadow-sm);
+}
+
+button.toggle-container-header:focus-visible {
+  outline: 2px solid var(--border-focus);
+  outline-offset: 2px;
+}
+
+button.toggle-container-header[aria-expanded="true"] {
+  background-color: var(--primary-subtle);
+  border-color: rgba(23, 101, 39, 0.4);
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.toggle-tittle {
+  font-weight: 700;
+  font-size: 1.02rem;
+  color: var(--text-primary);
+  letter-spacing: -0.01em;
+}
+
+button.toggle-container-header:hover .toggle-tittle,
+button.toggle-container-header[aria-expanded="true"] .toggle-tittle {
+  color: var(--primary);
+}
+
+.toggle-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: var(--radius-pill);
+  background-color: var(--primary-light);
+  color: var(--primary);
+  flex-shrink: 0;
+  transition: all var(--transition-fast);
+}
+
+button.toggle-container-header:hover .toggle-icon,
+button.toggle-container-header[aria-expanded="true"] .toggle-icon {
+  background-color: var(--primary);
+  color: #ffffff;
+}
+
+.toggle-icon svg {
+  color: inherit !important;
+}
+
+.toggeable-text-container {
+  box-shadow: var(--shadow-sm);
+  background-color: var(--bg-surface);
+  border: 1px solid rgba(23, 101, 39, 0.4);
+  border-top: none;
+  border-radius: 0 0 var(--radius-md) var(--radius-md);
+  animation: accordionDown 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes accordionDown {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.toggeable-content {
+  padding: 1.25rem 1.5rem;
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+.toggeable-content p {
+  margin-bottom: 0.75rem;
+}
+
+.toggeable-content ul {
+  padding-left: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.toggeable-content li {
+  margin-bottom: 0.4rem;
+}

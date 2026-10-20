@@ -1,0 +1,174 @@
+/* ==========================================================================
+   About Page - Modern Professional Theme
+   ========================================================================== */
+
+.aboutUsContent {
+  padding: 4rem 1rem;
+  background-color: var(--bg-surface);
+}
+
+.aboutUsSectionTextWrapper {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 2.5rem;
+}
+
+.aboutUsSectionText {
+  flex: 1 1 0px;
+}
+
+.aboutUsSectionText .sectionParaText {
+  margin-bottom: 1rem;
+}
+
+.aboutUsSectionTextOther {
+  padding: 2rem;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow var(--transition-normal);
+}
+
+.aboutUsSectionTextOther:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.memberSubSection {
+  display: flex;
+  gap: 10px;
+  border-bottom: 2px solid var(--primary-light);
+  padding-bottom: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+
+.memberSubSection p {
+  color: var(--primary);
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin: 0;
+  letter-spacing: -0.015em;
+}
+
+.sectionParaList {
+  padding-left: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.sectionParaList li {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 0.4rem;
+}
+
+.referrer-link {
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.referrer-link a {
+  text-decoration: none;
+  color: var(--primary);
+  font-weight: 700;
+  font-size: 0.9rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: transform var(--transition-fast), color var(--transition-fast);
+}
+
+.referrer-link a:hover {
+  color: var(--primary-hover);
+  transform: translateX(4px);
+}
+
+.participantsSection {
+  background-color: var(--bg-page);
+  padding: 4.5rem 1rem;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.participantsWrapper {
+  max-width: 1000px;
+}
+
+.participantGroupings {
+  margin-bottom: 1.75rem;
+}
+
+/* Modern Participant Table */
+.participant-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background-color: var(--bg-surface);
+  box-shadow: var(--shadow-sm);
+}
+
+.participant-table th {
+  background-color: var(--primary-light);
+  color: var(--primary);
+  font-weight: 700;
+  font-size: 0.95rem;
+  padding: 14px 20px;
+  border-bottom: 1px solid var(--border-subtle);
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  text-align: left;
+  letter-spacing: 0.02em;
+}
+
+.participant-table td {
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--border-subtle);
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  vertical-align: top;
+}
+
+.participant-table tr:last-child td {
+  border-bottom: none;
+}
+
+.participant-table tr:nth-child(even) td {
+  background-color: var(--primary-subtle);
+}
+
+.participant-table td:first-child {
+  font-weight: 700;
+  color: var(--text-primary);
+  width: 35%;
+}
+
+.participant-table ul {
+  padding-left: 1.25rem;
+}
+
+.participant-table ul li {
+  margin-bottom: 0.25rem;
+}
+
+@media (max-width: 991.98px) {
+  .aboutUsSectionTextWrapper {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .aboutUsSectionTextOther {
+    padding: 1.5rem;
+  }
+}

@@ -1,0 +1,102 @@
+/* ==========================================================================
+   Coordinator Card - Modern Professional Theme
+   ========================================================================== */
+
+.coordinator-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+.coordinator-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+}
+
+.coordinator-img {
+  width: 100%;
+  height: 280px;
+  background-color: var(--bg-subtle);
+  overflow: hidden;
+  position: relative;
+}
+
+.coordinator-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  transition: transform var(--transition-smooth);
+}
+
+.coordinator-card:hover .coordinator-img img {
+  transform: scale(1.03);
+}
+
+.coordinator-info {
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+}
+
+.coordinator-name {
+  margin-bottom: 0.75rem;
+}
+
+.coordinator-name p:first-child {
+  color: var(--text-primary);
+  font-weight: 700;
+  font-size: 1.15rem;
+  line-height: 1.3;
+  margin-bottom: 4px;
+}
+
+.coordinator-name p:nth-child(2) {
+  color: var(--primary);
+  font-weight: 600;
+  font-size: 0.85rem;
+  margin: 0;
+}
+
+.coordinator-details {
+  margin-top: auto;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--border-subtle);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.coordinator-details span:first-child {
+  color: var(--text-muted);
+  font-weight: 700;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 2px;
+}
+
+.coordinator-details span {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  word-break: break-all;
+}
+
+.coordinator-details a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.coordinator-details a:hover {
+  color: var(--primary);
+  text-decoration: underline;
+}

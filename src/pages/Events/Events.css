@@ -1,0 +1,78 @@
+/* ==========================================================================
+   Events & News Page - Modern Professional Theme
+   ========================================================================== */
+
+.events-page {
+  display: flex;
+  margin-top: 2.5rem;
+  margin-bottom: 4rem;
+  gap: 2rem;
+  min-height: 50vh;
+}
+
+.events-left {
+  flex: 1;
+  min-width: 0;
+}
+
+.eventsTitle {
+  margin-bottom: 1.5rem;
+}
+
+.eventsTitle h1,
+.eventsTitle h2 {
+  font-size: 2rem;
+  color: var(--text-primary);
+  font-weight: 800;
+  letter-spacing: -0.025em;
+}
+
+.events-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+  gap: 1.75rem;
+  align-items: stretch;
+}
+
+.events-right {
+  width: 320px;
+  flex-shrink: 0;
+}
+
+.event-social-content {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  padding: 1.5rem;
+  position: sticky;
+  top: 100px;
+}
+
+.event-social-para {
+  color: var(--primary);
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  letter-spacing: -0.01em;
+}
+
+@media (max-width: 991.98px) {
+  .events-page {
+    flex-direction: column;
+    margin-top: 1.5rem;
+    gap: 2rem;
+  }
+
+  .events-right {
+    width: 100%;
+  }
+
+  .event-social-content {
+    position: static;
+  }
+
+  .events-content {
+    grid-template-columns: 1fr;
+  }
+}

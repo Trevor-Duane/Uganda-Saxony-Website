@@ -1,0 +1,166 @@
+/* ==========================================================================
+   Resource Pages - Modern Professional Theme
+   ========================================================================== */
+
+.uganda-cover {
+  height: 440px;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url('https://uganda-saxonypartnership.org/cms/wp-content/uploads/2024/07/bunyonyi-hiils.jpg'), url('../../assets/scene.jpg');
+}
+
+.uganda-cover::before,
+.saxony-cover::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(180deg, rgba(15, 23, 42, 0.1) 0%, rgba(15, 23, 42, 0.7) 100%);
+}
+
+.uganda-cover-text {
+  display: flex;
+  position: absolute;
+  align-items: center;
+  gap: 0.5rem;
+  bottom: 2rem;
+  left: 2rem;
+  background: rgba(15, 23, 42, 0.75);
+  backdrop-filter: blur(8px);
+  padding: 8px 18px;
+  border-radius: var(--radius-pill);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  z-index: 2;
+}
+
+.uganda-cover-text span {
+  color: #ffffff;
+  display: block;
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.saxony-cover {
+  height: 440px;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url('https://uganda-saxonypartnership.org/cms/wp-content/uploads/2024/07/sachsen.jpg'), url('../../assets/sachsen.jpg');
+}
+
+.resources-page {
+  display: flex;
+  margin-top: 2.5rem;
+  margin-bottom: 4rem;
+  min-height: 50vh;
+  gap: 2rem;
+}
+
+.res-side-links {
+  width: 280px;
+  flex-shrink: 0;
+  background-color: var(--bg-card);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-subtle);
+  box-shadow: var(--shadow-sm);
+  padding: 1.25rem;
+  align-self: flex-start;
+}
+
+.res-side-links .side-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.res-content {
+  flex: 1;
+  min-width: 0;
+  padding: 0 1rem;
+}
+
+.resource-main-head {
+  font-size: 2rem;
+  color: var(--text-primary);
+  font-weight: 800;
+  margin-bottom: 1.25rem;
+  letter-spacing: -0.025em;
+}
+
+.toggeable-main-head {
+  font-size: 1.35rem;
+  color: var(--primary);
+  font-weight: 700;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  letter-spacing: -0.015em;
+}
+
+.resource-headers {
+  font-size: 1.2rem;
+  color: var(--text-primary);
+  font-weight: 700;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.resource-text {
+  font-size: 1rem;
+  line-height: 1.75;
+  color: var(--text-secondary);
+  margin-bottom: 1.25rem;
+  text-align: left;
+}
+
+.saxon-maps {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.link-toggeable {
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.link-toggeable:hover {
+  color: var(--primary-hover);
+  text-decoration: underline;
+}
+
+@media (max-width: 991.98px) {
+  .resources-page {
+    flex-direction: column;
+    margin-top: 1.5rem;
+    padding: 0 1rem;
+    gap: 1.5rem;
+  }
+
+  .res-side-links {
+    width: 100%;
+    align-self: auto;
+  }
+
+  .res-content {
+    padding: 1rem 0;
+  }
+
+  .uganda-cover,
+  .saxony-cover {
+    height: 300px;
+  }
+
+  .uganda-cover-text {
+    bottom: 1.25rem;
+    left: 1.25rem;
+  }
+}

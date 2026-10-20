@@ -1,0 +1,31 @@
+.not-found-container {
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.not-found-card {
+  max-width: 600px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+}
+
+.not-found-code {
+  font-size: 5rem;
+  font-weight: 800;
+  color: #1e8e2c;
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+.not-found-title {
+  color: #212529;
+  font-weight: 700;
+}
+
+.not-found-text {
+  font-size: 1.05rem;
+}

@@ -1,0 +1,188 @@
+/* ==========================================================================
+   Footer Styles - Modern Professional Theme
+   ========================================================================== */
+
+.site-footer {
+  background: linear-gradient(180deg, #145321 0%, #0d3b17 100%);
+  color: #ffffff;
+  padding-top: 3.5rem;
+  margin-top: auto;
+  border-top: 3px solid var(--primary);
+}
+
+.myFooter {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 2.5rem;
+  padding-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.logoCol {
+  background-color: #ffffff;
+  border-radius: var(--radius-lg);
+  height: 150px;
+  width: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  padding: 12px;
+  transition: transform var(--transition-normal);
+}
+
+.logoCol:hover {
+  transform: translateY(-2px);
+}
+
+.footer-brand-logo {
+  object-fit: contain;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.footerCol {
+  display: flex;
+  flex-direction: column;
+  min-width: 190px;
+}
+
+.footerColh6 {
+  margin-bottom: 14px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.15);
+  position: relative;
+}
+
+.footerColh6::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 32px;
+  height: 2px;
+  background-color: var(--accent);
+}
+
+.footerCol h6 {
+  color: #ffffff;
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  margin: 0;
+}
+
+.footerLinks {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+}
+
+.footerLinks a,
+.footerLinks .sectionLink {
+  color: #d2ebd6;
+  font-size: 0.92rem;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all var(--transition-fast);
+  display: inline-flex;
+  align-items: center;
+}
+
+.footerLinks a:hover,
+.footerLinks .sectionLink:hover {
+  color: #ffffff;
+  transform: translateX(3px);
+  text-decoration: none;
+}
+
+.socialIconsWrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.socialHeader {
+  color: #e2f2e5;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 4px;
+}
+
+.social-links-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 4px;
+}
+
+.social-links-row a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background-color: rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius-pill);
+  transition: all var(--transition-fast);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.social-links-row a svg {
+  color: #ffffff !important;
+  transition: transform var(--transition-fast);
+}
+
+.social-links-row a:hover {
+  background-color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.social-links-row a:hover svg {
+  color: var(--primary) !important;
+}
+
+.saxony-logo {
+  padding: 1.5rem 0;
+}
+
+.sponsor-logo {
+  max-height: 100px;
+  background: #ffffff;
+  padding: 12px 24px;
+  border-radius: var(--radius-md);
+  object-fit: contain;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.footer-divider {
+  border-color: rgba(255, 255, 255, 0.12);
+  margin: 1.5rem 0 0 0;
+}
+
+.copyRightSection {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.copyRightSection p {
+  font-size: 0.85rem;
+  color: #b2d8b8;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .myFooter {
+    flex-direction: column;
+    gap: 2rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .logoCol {
+    height: 120px;
+    width: 120px;
+  }
+}
