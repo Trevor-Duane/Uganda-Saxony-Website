@@ -1,0 +1,49 @@
+.coordinator-card{
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    border-radius: 6px;
+    height: fit-content;
+    flex: 1;
+  }
+  .coordinator-img{
+    height: 350px;
+    background-color: #f3f7f3 ;
+    width: 350px;
+  }
+  .coordinator-img img{
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    object-fit: cover;
+    object-position: 50% 28%;
+    height: 100%;
+    width: 100%;
+  }
+  .coordinator-info{
+    height: fit-content;
+    padding: 10px;
+  }
+  .coordinator-name{
+    margin-top: 5px;
+    line-height: 8px;
+  }
+  .coordinator-name p:first-child{
+    color: #1e8e2c;
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+  .coordinator-name p:nth-child(2){
+    color: #433f3f;
+    font-size: .8rem;
+  }
+  .coordinator-details{
+    margin-top: 1.5rem;
+  }
+  
+  .coordinator-details span:first-child{
+    color: #1e8e2c; 
+    font-weight: bold;  
+  }
+  .coordinator-details span{
+    display: block;
+    font-size: .8rem;
+  
+  }

@@ -1,0 +1,135 @@
+/* Resource Pages Styles */
+
+.uganda-cover {
+  height: 480px;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url('https://uganda-saxonypartnership.org/cms/wp-content/uploads/2024/07/bunyonyi-hiils.jpg'), url('../../assets/scene.jpg');
+}
+
+.uganda-cover-text {
+  display: flex;
+  position: absolute;
+  align-items: center;
+  gap: 0.5rem;
+  bottom: 1.5rem;
+  left: 1.5rem;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 6px 14px;
+  border-radius: 4px;
+}
+
+.uganda-cover-text span {
+  color: #ffffff;
+  display: block;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.saxony-cover {
+  height: 480px;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url('https://uganda-saxonypartnership.org/cms/wp-content/uploads/2024/07/sachsen.jpg'), url('../../assets/sachsen.jpg');
+}
+
+.resources-page {
+  display: flex;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+  min-height: 50vh;
+  gap: 1.5rem;
+}
+
+.res-side-links {
+  width: 280px;
+  flex-shrink: 0;
+  background-color: #ffffff;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  padding: 1rem;
+  align-self: flex-start;
+}
+
+.res-side-links .side-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.res-content {
+  flex: 1;
+  min-width: 0;
+  padding: 0 1rem;
+}
+
+.resource-main-head {
+  font-size: 1.6rem;
+  color: #1e8e2c;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.toggeable-main-head {
+  font-size: 1.25rem;
+  color: #1e8e2c;
+  font-weight: 700;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.resource-headers {
+  font-size: 1.2rem;
+  color: #212529;
+  font-weight: 600;
+  margin-top: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.resource-text {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #444444;
+  margin-bottom: 1rem;
+}
+
+.saxon-maps {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.link-toggeable {
+  color: #1e8e2c;
+  font-weight: 600;
+}
+
+@media (max-width: 991.98px) {
+  .resources-page {
+    flex-direction: column;
+    margin-top: 1rem;
+    padding: 0 1rem;
+  }
+
+  .res-side-links {
+    width: 100%;
+    align-self: auto;
+  }
+
+  .res-content {
+    padding: 1rem 0;
+  }
+
+  .uganda-cover,
+  .saxony-cover {
+    height: 320px;
+  }
+}
